@@ -1,4 +1,4 @@
-# policy-reporter
+# Policy Reporter code assessment.
 
 A code assessment exercise for Policy Reporter.
 
