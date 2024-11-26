@@ -25,6 +25,8 @@ function modThree(input) {
 
 }
 
+module.exports = modThree;
+
 console.log('result of "110" is', modThree('110')); // Case 1 from the Standard Exercise
 console.log('result of "1010" is', modThree('1010')); // Case 2 from the Standard Exercise
 console.log('result of "1101" is', modThree('1101')); // Case 1 of initial example - Result should be 1
