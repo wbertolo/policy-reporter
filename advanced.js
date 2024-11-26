@@ -1,3 +1,10 @@
+class FSM {
+	constructor() {
+
+	}
+}
+
+
 function modThree(input) {
 	
 	/* The rubric calls for logic separation, but given the small size of this exercise, 
@@ -17,8 +24,6 @@ function modThree(input) {
 				if ( state === 0 ) { state = 1 }
 				else if ( state === 1 ) { state = 0 }
 				break;
-			 default:
-				return false;
 		}
 
 	}
@@ -34,5 +39,3 @@ console.log('result of "1010" is', modThree('1010')); // Case 2 from the Standar
 console.log('result of "1101" is', modThree('1101')); // Case 1 of initial example - Result should be 1
 console.log('result of "1110" is', modThree('1110')); // Case 1 of initial example - Result should be 2
 console.log('result of "1111" is', modThree('1111')); // Case 1 of initial example - Result should be 2
-console.log('result of "2" is', modThree('2')); // A non binary number - Result should be false
-console.log('result of "" is', modThree()); // A non binary number - Result should be false

@@ -40,4 +40,12 @@ describe('modThree function tests', () => {
   test('modThree should return 0 for input 10010', () => {
     expect(modThree(10010)).toBe(0);
   });
+
+  test('modThree should return false for input 2', () => {
+    expect(modThree(2)).toBe(false);
+  });  
+
+  test('modThree should return false for no input', () => {
+    expect(modThree()).toBe(false);
+  });    
 });
