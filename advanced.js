@@ -3,15 +3,18 @@ class FSM {
 	constructor(setOfStates, alphabet, initialState, finalStates, transitionF) {
 		this.setOfStates = setOfStates;
 		this.alphabet = alphabet;
-		this.currentState = initialState;
+		this.initialState = initialState;
 		this.finalStates = finalStates;
 		this.transitionF = transitionF;
+		this.currentState;
 	}
 
 	modThree(input) {
 
-		if (!input) return 'Not a valid input.';
-		
+		this.currentState = this.initialState; // Reset the current state to the initial state.
+
+		if (!input) return 'Not a valid input.'; // Empty input case. Terminate.
+
 		for (let symbol of input) {
 
 			// Invalid symbol case.
@@ -19,16 +22,11 @@ class FSM {
 			  return 'Invalid input symbol. Valid symbols are 0 and 1';
 			}
 
-			const nextState = this.transitionF[this.currentState][symbol];
-			
-			if (nextState !== undefined) {
-			  this.currentState = nextState;
-			} else {
-			  throw new Error(`No transition defined for state ${this.currentState} and input ${symbol}`);
-			}
+			this.currentState = this.transitionF[this.currentState][symbol]; // Defines the new current state based on the transitions values.
+
 		}
 
-		return this.currentState % 3; // Returns the result.
+		return this.finalStates[this.currentState] % 3; // Returns the result.
 
 	}
 
