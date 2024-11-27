@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:standard": "jest standard.test.js",
+    "test:advanced": "jest advanced.test.js",
     "basic": "nodemon basic.js",
-    "standard": "nodemon standard.js"
+    "standard": "nodemon standard.js",
+    "advanced": "nodemon advanced.js"
   },
   "keywords": [],
   "author": "",
