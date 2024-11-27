@@ -56,6 +56,8 @@ function createModThreeFSM() {
 
 }
 
+module.exports = { FSM, createModThreeFSM };
+
 const fsm = createModThreeFSM(); // set of states, alphabet, iState, accepting/final states, transition function
 console.log('result of "1101" is', fsm.modThree('1101')); // Case 1 of initial example - Result should be 1
 console.log('result of "1110" is', fsm.modThree('1110')); // Case 1 of initial example - Result should be 2
